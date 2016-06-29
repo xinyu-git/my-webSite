@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片懒加载</title>
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<script type="text/javascript" src="common1.0.js"></script>
+	<style type="text/css">
+	#ul1{
+		margin: 0 auto;
+	}
+	#ul1 li{
+		width: 500px;
+		height: 246px;
+		float: left;
+		margin: 50px;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onscroll=window.onload = function () {
+	            var oUl=document.getElementById('ul1');
+	            var aImg=oUl.getElementsByTagName('img');
+
+	            var clientH=document.documentElement.clientHeight;
+	            var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+	            for(var i=0; i<aImg.length; i++){
+	                if(clientH+scrollTop>=getPos(aImg[i]).top){
+	                    // aImg[i].src=aImg[i]['_src'];
+	                    aImg[i].src=aImg[i].getAttribute('_src');
+	                }
+	            }
+	 };
+
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li><img _src="img2/dsj1.jpg" /></li>
+		<li><img _src="img2/dsj2.jpg" /></li>
+		<li><img _src="img2/dsj3.jpg" /></li>
+		<li><img _src="img2/dsj4.jpg" /></li>
+		<li><img _src="img2/dsj5.jpg" /></li>
+		<li><img _src="img2/dsj6.jpg" /></li>
+		<li><img _src="img2/dsj7.jpg" /></li>
+		<li><img _src="img2/dsj8.jpg" /></li>
+		<li><img _src="img2/dsj9.jpg" /></li>
+		<li><img _src="img2/dsj10.jpg" /></li>
+	</ul>
+</body>
+</html>

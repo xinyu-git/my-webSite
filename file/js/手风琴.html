@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<script type="text/javascript" src="common1.0.js"></script>
+	<style type="text/css">
+	.box{
+		width: 800px;
+		height: 400px;
+		position: absolute;
+		left: 50%;
+		top: 100px;
+		margin-left: -350px;
+	}
+	.sfq{
+		width: 712px;
+		position: relative;
+		height: 320px;
+		overflow: hidden;
+
+	}
+	.sfq li{
+		width: 512px;
+		height: 320px;
+		position: absolute;
+	}
+	.sfq li img{
+		width: 100%;
+	}
+	</style>
+	<script type="text/javascript">
+	domReady(function(){
+		var oUl=document.getElementById('sfq');
+		var aLi=oUl.children;
+		// 布局
+		var W=50;
+		for(var i=1; i<aLi.length; i++){
+		    aLi[i].style.left=aLi[0].offsetWidth+(i-1)*W+'px';
+		}
+		for(var i=0; i<aLi.length; i++){
+			aLi[i].index=i;
+			aLi[i].onmouseover=function(){
+				for(var i=1; i<aLi.length; i++){
+					if(i<=this.index){
+						move(aLi[i],{left:i*W});
+					}else{
+						move(aLi[i],{left:aLi[0].offsetWidth+(i-1)*W});
+					}
+				}
+			}
+		}
+	})
+	</script>
+</head>
+<body>
+	<div class="box">
+		<ul class="sfq"id="sfq">
+			<li><img src="img/sf1.jpg"</li>
+			<li><img src="img/sf2.jpg"</li>
+			<li><img src="img/sf3.jpg"</li>
+			<li><img src="img/sf4.jpg"</li>
+			<li><img src="img/sf5.jpg"</li>
+		</ul>
+	</div>
+</body>
+</html>

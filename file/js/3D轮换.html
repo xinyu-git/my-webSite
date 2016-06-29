@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D轮换</title>
+	<link href="img/logoico.png" rel="icon" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="common1.0.js"></script>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin: 0;
+		}
+		li{
+			list-style: none;
+		}
+		body{
+			background-color: #444;
+		}
+		img{
+			border: none;
+		}
+		input{
+			border:0; 
+			width: 100px;
+			height: 30px;
+			background: #6600FF;
+			color: #fff;
+			text-align: center;
+			line-height: 30px;
+		}
+		#btn1{
+			margin: 30px 0 0 40%;
+		}
+		#btn2{
+			margin: 30px 0 0 3%;
+		}
+		.ul1{
+			width: 900px;
+			height: 380px;
+			margin: 50px auto 0;
+			position: relative;
+			background: url(img/bg.jpg) #000;
+			overflow: hidden;
+		}
+		.ul1 li{
+			width: 250px;
+			height: 340px;
+			position: absolute;
+			text-align: center;
+		}
+		.ul1 li span{
+			width: 212px;
+			height: 90px;
+			overflow: hidden;
+			position: absolute;
+			bottom: 0;
+			left: 20px;
+			background: url(img/shade.png)!important;
+			background:none;
+		}
+		.ul1 img{
+			position: relative;
+		}
+		.ul1 .pic1{ 
+			top: 20px; 
+			left: 77px; 
+		}
+		.ul1 .pic1 img {
+			top:20px;
+		}
+		.ul1 .pic2{
+			top: 55px; 
+			left: 336px;
+		}
+		.ul1 .pic3{
+			top: 20px;
+			left: 595px; 
+		}
+		.ul1 .pic3 img{
+			top:20px;
+		}
+		.ul1 .unactive{
+			filter: alpha(opacity=20); 
+			opacity: 0.4;
+		}
+	</style>
+	<script>
+	window.onload=function(){
+		var oBtn=document.getElementById('btn1');
+		var oBtn2=document.getElementById('btn2');
+		var oUl=document.getElementById('ul1');
+		var aImg=oUl.getElementsByTagName('img');
+		var aLi=oUl.children;
+		var aA=oUl.getElementsByTagName('a');
+
+		// 左
+		aA[0].onclick=function(){
+			aPos.push(aPos.shift());
+			tab();
+			return false;
+		};
+		// 右
+		aA[2].onclick=function(){
+			aPos.unshift(aPos.pop());
+			tab();
+			return false;
+		};
+
+		var aPos=[];
+		for(var i=0; i<aLi.length; i++){
+			aPos[i]={
+				left: aLi[i].offsetLeft,
+				top: aLi[i].offsetTop,
+				width: aImg[i].offsetWidth,
+				height: aImg[i].offsetHeight,
+				opacity: getStyle(aImg[i], 'opacity'),
+				imgT: aImg[i].offsetTop,
+				fnClick: aA[i].onclick
+			}
+		}
+		// 往左边动
+		addEvent(oBtn,'click',function(){
+			aPos.unshift(aPos.pop());
+			tab();
+		})
+		// 往右边动
+		addEvent(oBtn2,'click',function(){
+			aPos.push(aPos.shift());
+			tab();
+		})
+		function tab(){
+			for(var i=0; i<aLi.length; i++){
+				move(aLi[i], {left: aPos[i].left, top: aPos[i].top});
+				move(aImg[i], {width: aPos[i].width, height: aPos[i].height, opacity: aPos[i].opacity, top: aPos[i].imgT});
+				aA[i].onclick=aPos[i].fnClick;
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<input type="button" value="向左走" id="btn1">
+	<input type="button" value="向右走" id="btn2">
+	<ul id="ul1" class="ul1">
+		<li class="pic1">
+			<a href="javascript:;"><img src="img/pic1.gif" alt="pic1" class="unactive" width="187"  /></a>
+			<span></span>
+		</li>
+		<li class="pic2">
+			<a href="javascript:;"><img src="img/pic2.gif" alt="pic2" width="208" /></a>
+			<span></span>
+		</li>
+		<li class="pic3">
+			<a href="javascript:;"><img src="img/pic3.gif" alt="pic3" class="unactive" width="187"/></a>
+			<span></span>
+		</li>
+	</ul>
+</body>
+</html>

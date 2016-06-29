@@ -1,0 +1,2320 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="js/DD_belatedPNG.js"></script>
+		<script>
+			DD_belatedPNG.fix('*');
+		</script>
+<link href="css/base.css" rel="stylesheet" />
+<style>
+		.top{ width:100%; height:40px; background:#f5f5f5; border-bottom:1px solid #eeeeee; } 
+		.top-nav{ width:710px; height:40px;  }
+		.box li{ /*display:inline-block;*/ line-height:40px; float:left; height:40px;  }
+		.box .nav-wx{ width:92px;}
+		.box .nav-wx a{ border-right:1px dashed #cbcbcb; display:inline-block; 
+								 width:98px; height:18px; line-height:18px;
+									 text-align:center; 	}
+		.box .nav-wx .weixin{ width:16px; height:16px; display:inline-block;
+											background:url(img/i_wx_single.png) no-repeat;  
+											margin-bottom:-3px;}		
+		.box .nav-qq a{ border-right:1px dashed #cbcbcb; display:inline-block; 
+								 	width:94px; height:18px; line-height:18px;
+									 text-align:center; 	}
+		.box .nav-qq .qq{ width:17px; height:17px; display:inline-block;
+									 background:url(img/mls_global140607.png) no-repeat -189px -21px;  						
+											margin-bottom:-3px;}		
+		.box .nav-login a{ border-right:1px dashed #cbcbcb; display:inline-block; 
+								 	width:54px; height:18px; line-height:18px;
+									 text-align:center; 	}							
+		.box .nav-sign a{ border-right:1px dashed #cbcbcb; display:inline-block; 
+								 	width:54px; height:18px; line-height:18px;
+									 text-align:center; 	}	
+		.box .nav-cart a{ border-right:1px dashed #cbcbcb; display:inline-block; 
+								 	width:137px; height:18px; line-height:18px;
+									 text-align:center; 	}								 
+		.box .nav-cart .cart{ width:18px; height:15px; display:inline-block;
+									 background:url(img/mls_global140607.png) no-repeat 0 -165px;  						
+											margin-bottom:-3px;}
+		.box .nav-cart  .num{ position:relative; background:url(img/nav-num1.jpg) repeat-x;
+											 height:15px; line-height:15px; color:#FFF; padding:2px 6px; }								
+		.box .nav-cart .num-l{ width:6px; height:15px; 
+											background:url(img/buycar-l.jpg) no-repeat; 
+											position:absolute; left:0; top:0;}
+		.box .nav-cart .num-r{ width:6px; height:15px; 
+											background:url(img/buycar-r.jpg) no-repeat; 
+											position:absolute; right:0; top:0;}			
+		.box .nav-order a{ border-right:1px dashed #cbcbcb; display:inline-block; 
+								 	width:100px; height:18px; line-height:18px;
+									 text-align:center; 	}										
+		.box .nav-order .order{ width:13px; height:15px; display:inline-block;
+									 background:url(img/mls_global140607.png) no-repeat -223px -45px;  						
+											margin-bottom:-3px;}		
+		.box .nav-download a{ border-right:1px dashed #cbcbcb; display:inline-block; 
+								 	width:94px; height:18px; line-height:18px;
+									 text-align:center; 	}		
+		.box .nav-download .download{  width:13px; height:17px; display:inline-block;
+																 background:url(img/mls_global140607.png) no-repeat -223px -45px;  						
+																margin-bottom:-3px;}		
+		.box .nav-serve a{ display:inline-block;  text-align:center;
+								 	width:73px; height:18px; line-height:18px;	}
+			/*top end*/						
+		.logo{ width:100%; height:66px;  position:relative;}							
+		.logo h1{ 
+						background:url(img/logo_n4.png) no-repeat; 
+						width:106px; height:36px; text-indent:-999em; 
+						margin-top:15px; margin-left:10px;
+						}		
+		 .box-search{ width:464px; height:34px; background:#ff6699; position:absolute;
+		 						left:50%;  top:50%; margin-left:-232px; margin-top:-17px; }	
+		.product-box{ width:69px; height:30px; margin-left:2px; margin-top:2px; 
+								 border-right:1px solid #e6e6e6; }	
+		 .product-box a{ width:69px; height:30px; display:block; text-align:center; line-height:30px; }	
+		 .product-box .pro1{ background:#f5f5f5; position:relative; z-index:10;}			
+		 .product-box .pro2{ width:68px; border:1px solid #e6e6e6; 
+		 									position:absolute; left:0; top:30px; display:none; background:#FFF;}
+		 .product-box .pro-ico{ width:8px; height:8px; 
+		 										background:url(img/mls_global140607.png) no-repeat  -22px -70px; 
+		 										position:absolute; right:10px; bottom:8px;}	
+		 .product-box:hover .pro2{display:block; border-top:0;}																			
+		 .product-box a:hover{ background:#f5f5f5;}	
+		 .search-1{ width:300px; height:30px; position:relative;}
+		 .search-1 .sear-box{ width:25px; height:30px; background:#FFF; position:absolute; left:72px; top:-30px;}	
+		 .search-1 .sear-ico{ width:14px; height:14px; 
+		 								background: url(img/mls_global140607.png) no-repeat 0 -69px #FFF;
+										 position:absolute; left:6px; top:8px;}	
+		.search-1 input{ width:275px; height:30px;  position:absolute; left:97px; top:-30px;}		
+		.search-2{ width:90px; height:30px;
+							background:#f69; position:absolute; left:370px; top:-30px;}		
+		.search-2 input{ width:90px; height:30px;  font-size:14px; color:#FFF;
+									 position:absolute; left:0; top:0; background:none;}			
+			/*logo end*/	
+		.banner-box{ width:100%; height:40px; background:#ff6599; position:relative;}		
+		.banner-box .b-nav{ width:790px; height:40px; margin-left:210px; }
+		.banner-box .b-nav li{ float:left;  font-weight:bold; height:40px; line-height:40px; }	
+		.banner-box .b-nav li a{ color:#FFF; font-size:14px; width:28px; }			 	
+		.banner-box .b-nav .nav-home{ width:30px; height:40px;  padding:0 14px;}	
+		.banner-box .b-nav .nav-hot{ width:60px; height:40px; padding:0 14px;}		
+		.banner-box .b-nav .nav-last{ width:90px; height:40px; padding:0 14px;}
+	   .b-nav li{  width:30px; padding:0 14px;}	
+	   .banner-box .b-nav .nav-clothes{ position:relative;}
+	   .banner-box .b-nav .nav-clothes .nav-ico{ display:inline-block; width:5px; height:3px;
+	   									 background:url(img/mls_global140607.png) no-repeat  -66px -70px; 
+										 position:absolute; left:50px; top:19px;
+										 }	
+	 	 .nav-clothes .clo-sub{ position:absolute; left:0; top:40px; z-index:1;width:56px; height:120px;
+		 									 border:1px solid #ff6699; background:#fff; display:none;}	
+		 .nav-clothes .clo-sub a:hover{ background:#ed3577; color:#FFF;}		
+		  .nav-clothes:hover .clo-sub{ display:block;}					 
+		 .nav-clothes .clo-sub .clo-sub1{ display:block; width:56px; height:30px; 
+		 														line-height:30px; text-align:center; color:#ff6699; }																					 					 
+		 .banner-box .b-nav .nav-last{ position:relative;}							 
+		 .banner-box .b-nav .nav-last .nav-ico1{ display:inline-block; width:5px; height:3px;
+	   									 background:url(img/mls_global140607.png) no-repeat  -66px -70px; 
+										 position:absolute; left:90px; top:19px; 
+										 }								 
+		.nav-last .beat-sub{ position:absolute; left:0; top:40px; z-index:1; border:1px solid #ff6699; 
+										width:116px; height:90px; background:#FFF; display:none;}	
+		.nav-last .beat-sub .beat-sub1{ display:block; width:116px; height:30px; 
+		 								  line-height:30px; text-align:center; color:#ff6699; }		
+		.nav-last:hover .beat-sub{ display:block;}		
+		.nav-last 	.beat-sub a:hover{ background:#ed3577; color:#FFF;}				  												 	
+		.b-nav li:hover{ background:#ed3577;}							 									 				
+		 /*banner end*/		
+		 .bg-box{ width:100%; height:574px; position:relative;}		
+		.bg-box .bg-pic{	 width:100%; height:420px; border-bottom:1px solid #e6e6e6;
+									background:url(img/bg-pic.jpg) no-repeat -325px 0;}								
+		.bg-left{ width:238px; height:570px; background:#ffffff;
+							position:absolute; top:0; left:75px;border:1px solid #e6e6e6; border-right:0; 
+							}	
+		.left-list{ width:238px; border-right:1px solid #e6e6e6; }	
+		.list-hot{ width:198px; height:105px; border-bottom:1px dotted #cbcbcb; margin-left:20px; margin-right:20px; padding-top:10px;}	
+		 .list-conbox .add{ border-bottom:0;}
+		.bg-left .list-conbox{ width:238px; height:105px; padding:0 0 10px 0; position:relative;}		
+		.list-conbox .list-title{ height:17px;  font-weight:bold;} 							 												 															
+		.list-conbox .list-title a{ color:#ff6699; background:url(img/icon-1.jpg) no-repeat 4px 0; padding-left:24px;
+										       font-size:16px; line-height:18px; height:18px; float:left;}
+		.list-con{ padding-top: 5px;  height:60px;}
+		.list-con a{ color:#666666; float:left; 
+						margin-right:14px; margin-top:10px;}
+		.list-con .con1{ color:#ff6699;}
+		.list-con .corner{ background:url(img/icon-r.jpg) no-repeat; position:absolute; top:51px; left:219px; width:7px; height:10px;}
+		.list-conbox .submenu .submenu-title h4 a{ line-height:20px; font-size:14px; font-weight:bold; }
+		.list-conbox .submenu{ width:310px; height:340px; position:absolute; left:238px; top:0;
+												 background:#FFF; padding-left:10px; padding-right:10px; display:none;}
+		.list-conbox .submenu p a{ font-size:13px; color:#666666; float:left; 
+														margin-right:14px; margin-top:10px; }
+		.list-conbox .submenu p{ overflow:hidden;}		
+		.list-conbox .submenu h4{ padding-top:10px;}	
+		 .list-conbox:hover .submenu{ display:block;}	
+		 .list-conbox a:hover{ color:#ff6699;}	
+		 .list-conbox .submenu a:hover{ color:#ff6699;}						
+		 .list-conbox:hover{ border-bottom:1px solid #e6e6e6; border-top:1px solid #e6e6e6; border-right:0;}
+		 .bg-left .add1:hover{ border-bottom:0; border-right:0;}
+ 		 .list-conbox:hover .list-hot{ border-bottom: none;}
+		 /*bg-left*/
+		.bg-right{ width:200px; height:420px; margin-right:75px; position:absolute; right:0; top:0;}
+		.bg-right a{ display:block; width:200px; height:139px; border-bottom:1px solid #e6e6e6;}
+		.bnr-box{ width:960px; height:155px; position:absolute; left:315px; top:200; z-index:1;}
+		.bnr-list{ width:960px; height:144px;}
+		.bnr-list li{ width:175px; height:142px; border:1px solid #e6e6e6; margin-left:10px; margin-top:10px; float:left;}
+		.bnr-list .ads-one{ width:198px; height:142px;border:1px solid #e6e6e6; margin-top:10px; float:left; }
+		 /*bg-right bnr-list end*/
+		 .sp-wrap{ width:1200px; height:814px; margin-left:75px; overflow:hidden;}
+		 .title-box{ width:1200px; height:32px; border-bottom:1px solid #e6e6e6; margin-top:20px;}
+		 .sp-title{ width:158px; height:26px; background:url(img/wel_ico2.png) no-repeat  0 0; text-indent:-999em;}
+		 .sp-sku{ width:1200px; height:746px; padding-top:15px; }
+		 .sp-sku li{ float:left; width:180px; height:353px; margin-right:24px; margin-bottom:20px;}
+		 .sp-sku .last{ margin-right:0;}
+		 .sp-picbox{ width:180px; height:255px;}
+		 .sp-text{ width:180px; height:40px; margin-top:10px;}
+		 .price-box{ width:180px; height:24px; border-bottom:1px dashed #cbcbcb; margin-bottom:10px;}
+		 .price-red{ font-size:16px; color:#ff6699;}
+		 .price{ font-size:12px; color:#999999; text-decoration:line-through; padding-left:9px;}
+		 .price-num{ font-size:12px; font-family:'Arial'; color:#666666;}
+		 .sp-text a:hover{ color:#ff7dc8;}
+		 /*sp-wrap end*/
+		  .auto-wrap{ width:1200px; height:461px; margin-left:75px; overflow:hidden;}
+		 .auto-box{ width:1200px; height:32px; border-bottom:1px solid #e6e6e6; margin-top:20px;}
+		 .auto-box .more{ float:right; font-size:14px;}
+		  .auto-box  .more span{ width:14px; height:14px; background:url(img/icon-r.jpg) no-repeat; float:right; margin-left:9px;}
+		 .auto-title{ width:158px; height:26px; background:url(img/wel_ico2.png) no-repeat  0 -240px; text-indent:-999em;}
+		 .auto-sku{ width:1200px; height:746px; padding-top:15px; }
+		 .auto-sku li{ float:left; width:180px; height:353px; margin-right:24px; margin-bottom:20px;}
+		 .auto-sku .last{ margin-right:0;}
+		 .auto-picbox{ width:180px; height:255px;}
+		 .sp-text{ width:180px; height:40px; margin-top:10px;}
+		 .price-box{ width:180px; height:24px; border-bottom:1px dashed #cbcbcb; margin-bottom:10px;}
+		 .price-red{ font-size:16px; color:#ff6699;}
+		 .price{ font-size:12px; color:#999999; text-decoration:line-through; padding-left:9px;}
+		 .price-num{ font-size:12px; font-family:'Arial'; color:#666666;}
+		 .sp-text a:hover{ color:#ff7dc8;}
+		 .auto-box a:hover{ color:#ff7dc8;}
+		 /*auto-wrap end*/
+		 .src-pic-box{ position:relative; width:1200px; height:100px; margin-left:75px;}
+		 .src-pic-box .src-pic{ position:absolute; left:0; top:0; width:1200px; height:100px; 
+		 										background:url(img/src-pic.jpg) no-repeat; }
+		.opa-wrap{ width:1200px; height:664px; border-bottom:1px solid #e6e6e6; 
+							 margin-left:75px;}				
+		.opa-box{ width:1200px; height:32px; 	padding-top:20px; border-bottom:1px solid #e6e6e6;}
+		.opa-wrap .opa-title{ width:220px; height:26px;}
+		.opa-box .more{ float:right; font-size:16px; color:#999999;}
+		 .opa-box  .more span{ width:14px; height:14px; background:url(img/icon-r.jpg) no-repeat;
+		 										float:right; margin-left:9px; margin-top:4px;}
+		.opa-wrap .opa-title .ico-clo{ width:75px; height:26px; background:url(img/wel_ico2.png) no-repeat 0 -44px; 
+															text-indent:-999em; float:left;}
+		.opa-wrap .opa-title .add{ background-position:0 -83px;}		
+		.opa-wrap .opa-title .add1{ background-position:0 -120px;}	
+		.opa-wrap .opa-title .add2{ background-position:0 -157px;}													
+		.opa-wrap .opa-title .today{width:120px; height:16px; border-left:1px dashed #cccccc; 
+														margin-top:5px; margin-left:10px; padding-left:10px; float:left; color:#999999;}
+		.opa-wrap .opa-title .today strong{ font-weight:bold; padding:0 5px; color:#666666;}			
+		 .opa-wrap .pro-box{ width:940px; height:611px; border-right:1px solid #e6e6e6;}	
+		 .opa-wrap .pro-box .pic-box{ width:939px; height:518px; padding-top:15px; }	
+		 .pro-box .pic-box li{ position:relative; float:left; width:180px; height:255px; margin-right:5px; margin-top:4px;}		
+		 .pro-box .pic-box li  .opa img{  position:absolute; left:0; bottom:0;}		
+		 .pro-box .pic-box li  .opa .con{ position:absolute; left:40px;bottom:8px; color:#FFF; font-size:14px;}			
+		 .pro-box .pro-words{ width:940px; height:44px; padding-top:18px; padding-bottom:16px;}
+		 .pro-box .pro-words li{ float:left; width:300px; height:44px; border-right:1px dashed #cccccc; padding-left:12px;}
+		 .pro-box .pro-words .last{ border-right:0;}
+		 .pro-box .pro-words li h2{ width:50px; height:43px; line-height:43px; float:left; font-size:16px; color:#ff6699;}	
+		 .pro-box .pro-words li  p{ width:250px; height:44px; float:left;}
+		 .pro-box .pro-words li  p a{ float:left; margin:4px 10px 4px 0;}
+		 .opa-box a:hover{ color:#ff8cb3;}
+		 .pro-box a:hover{ color:#ff8cb3;}
+		 .pro-title a:hover{ color:#ff8cb3;}
+		 .pro-list a:hover{ color:#ff8cb3;}
+		 .pro-shop{ width:239px; height:591px; padding-left:20px; padding-top:20px; }
+		 .pro-shop .pro-title{ width:239px; height:19px; }
+		  .pro-shop .pro-title h3{ width:105px; height:19px; font-size:17px; float:left; font-weight:bold; color:#666666;}
+		 .pro-title .more{ float:right; font-size:13px; color:#999999; margin-top:2px;}
+		 .pro-title  .more span{ width:14px; height:14px; background:url(img/icon-r.jpg) no-repeat;
+		 										float:right; margin-left:9px; margin-top:2px;}
+		.pro-shop .pro-list	{ width:239px; height:573px; }		
+		.pro-shop .pro-list	 li{ width:239px; height:34px; padding:14px 0; border-bottom:1px dashed #ccc;}	
+		.pro-shop .pro-list	 .last{ border-bottom:0;}
+		.pro-shop .pro-list	 .pro-con{ float:left; width:32px; height:32px; border:1px solid #e6e6e6; margin-right:12px;}		
+		.pro-list	 li .con-name{  float:right; width:193px; height:14px; line-height:14px; margin-bottom:9px; }	
+		.con-name a{ color:#666666;}		
+		.pro-list li .con-text{ color:#999999;}
+			 /*apo- all end*/
+			 .maga-wrap{ width:1200px; height:341px; margin-left:75px;}
+			 .maga-wrap .maga-box { width:1200px; height:22px; margin-top:20px;}
+			.maga-wrap .maga-box .maga-title{ width:116px; height:21px; 
+																			background: url(img/wel_ico2.png) no-repeat 0 -200px; text-indent:-999em;}
+			.maga-box .maga-words p{ width:439px; height:18px;}		
+			.maga-box p a{ display:inline-block; width:58px; height:16px; font-size:13px;
+											text-align:center; line-height:16px; border-right:1px dashed #999999;}	
+			.maga-box p .maga-last{ border-right:0; width:84px; height:16px}	
+			.maga-box p .maga-ico{ float:right; width:7px; height:10px; background:url(img/icon-r.jpg) no-repeat; 
+														margin-left:5px; margin-top:2px;}		
+		   .maga-words a:hover{ color:#ff6699;}
+		   .maga-wrap .maga-con{ width:1200px; height:299px; margin-top:15px; }		
+		   .maga-con .maga-group{ float:left; width:226px; height:283px; border:1px solid #dddddd;}	
+		   .maga-con li{ margin-right:15px;}
+		   .maga-con .last{ margin-right:0;}
+		   .maga-con .group-box{ width:200px; height:260px; margin-left:13px;}
+			.maga-con .maga-group h3{ width:200px; height:27px; color:#666666; font-size:14px; font-weight:bold; margin-top:10px;}						
+			 .group-box .lookbox{ width:200px; height:33px; margin-top:13px;}
+			  .lookbox .look-btn{ width:56px; height:30px; text-align:center; line-height:30px; color:#FFF;
+			  							background:url(img/mls_global140607.png) no-repeat -1px -517px; }
+			 .lookbox span{ float:left; width:60px; height:30px; text-align: center; line-height:30px; color:#999999;}	
+			 .maga-wrap a:hover{ color:#ff6699;}
+			 /*maga-wrap end*/
+			 .foot-wrap{ width:100%; height:311px; border-top:1px solid #ddd; background:#f5f5f5;}	
+			 .foot-wrap .foot-con{ width:1200px; height:183px; margin-top:30px;  margin-left:75px;}	
+			 .foot-con .foot-list{ width:70px; margin-right:53px; float:left;}		
+			 .foot-wrap .foot-con .service{ width:190px;}	
+			  .foot-con .service .service-box .s-tel{ width:36px; height:39px; margin-right:15px;
+			  							background:url(img/mls_global140607.png) no-repeat 0 -114px;}
+			.service .service-box .foot-line{width:139px;  float:left; margin-bottom:10px; color:#666;}		
+			.foot-con .service .service-box .foot-num{ font-size:15px; font-weight:bold; margin-bottom:10px; width:190px;}
+			.foot-con .service .service-box .foot-date{ margin-left:51px; width:139px;}	
+			.foot-list h3{ font-size:15px; font-weight:bold; color:#666; margin-bottom:20px; margin-left:1px;}	
+			.foot-list p{color:#666; margin-bottom:14px; width:70px;  }
+			.foot-list p span{ display:inline-block;  width:16px; height:16px;}
+			.foot-list p .att-ico1{display:inline-block; margin-bottom:-3px; width:16px; height:16px;
+											 background:url(img/mls_global140607.png) no-repeat 0 -21px;}		
+			.foot-list p .att-ico2{ background:url(img/mls_global140607.png) no-repeat  -73px  -22px; margin-bottom:-3px}
+			.foot-list p .att-ico3{ background:url(img/mls_global140607.png) no-repeat  -50px  -21px; margin-bottom:-3px}
+			.foot-con .foot-wx{ width:136px;}
+			.foot-con .foot-wx h3, .foot-con .f-download h3{ width:136px; height:18px; font-size:16px;
+																							 font-weight:bold; color:#666; margin-bottom:20px;}
+			.foot-con .foot-wx p{ width:115px; height:115px; background:url(img/weixin.jpg) no-repeat;}
+			.foot-con .f-download{ width:140px; height:134px;}
+			.foot-con .f-download p{ width:131px; height:98px; background:url(img/mls_global140607.png) no-repeat 0 -401px;}
+			.foot-wrap a:hover{ color:#ff6699;}
+           .foot-rolling{ width:1200px; height:30px; border-top: 1px solid #e6e6e6; border-bottom:1px solid #e6e6e6; margin-left:75px;} 
+			.foot-rolling h3, .foot-rolling li{ float:left; line-height:30px; margin-right:14px;}
+			.foot-rolling  .last{ float:right;}
+			.foot-wrap .record{ width:1200px; margin-left:75px; margin-top:10px; color:#666;}
+			 /*foot-wrap end*/
+			 .fixed-wrap a, .fixed-gotop{ display:block; width:54px; height:54px; border:1px solid #ddd;}
+			.fixed-wrap .fixed-ico{ background:url(img/fixed-ico.jpg) no-repeat; position:fixed; right:0; bottom:60px;}
+			.fixed-wrap .fixed-gotop{ position:fixed; right:0; bottom:60px; text-align:center; line-height:54px; background:#FFF; display:none;}
+			.fixed-wrap:hover .fixed-gotop{ display:block; color:#ff6699;} 	
+</style>
+</head>
+
+<body>
+		<div class="top clearfix">
+        		<div class="top-nav clearfix fr">
+                	<ul class="box clearfix fr">
+                    	<li class="nav-wx">
+                	<a href="#">
+                    <p class="weixin"></p>
+                        微信登录
+                    </a>
+                        </li>
+                    <li class="nav-qq">
+                	<a href="#">
+                    <p class="qq"></p>
+                    QQ登录     
+                    </a>
+                        </li>
+                    <li class="nav-login">
+                	<a href="#">登录</a>
+                        </li>
+                    <li class="nav-sign">
+                	<a href="#">注册</a>
+                        </li>
+                    <li class="nav-cart">
+                	<a href="#" class="bucart-box">
+                    <p class="cart"></p>
+                    我的购物车
+                    <span class="num">
+                    		<i class="num-l"></i>
+                            0
+                            <i class="num-r"></i>
+                    </span>
+                    </a>
+                        </li>
+                    <li class="nav-order">
+                	<a href="#">
+                    <p class="order"></p>
+                    我的订单</a>
+                        </li>
+                    <li class="nav-download">
+                	<a href="#">
+                    <p class="download"></p>
+                    下载APP</a>
+                        </li>
+                   <li class="nav-serve">
+                	<a href="#">帮助中心</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <!--top end!-->
+<div class="logo">
+		<h1>美丽说</h1>
+        <div class="box-search">
+        		<div class="product-box">
+                		<div class="pro1">
+                        <a href="#">宝贝
+                        	<p class="pro-ico"></p>
+                        </a>
+                        <div class="pro2">
+                        	 <p><a href="#">商家</a></p>
+                            <p><a href="#">杂志</a></p>
+                            <p><a href="#">用户</a></p>
+                        </div>
+                        </div>
+                </div>
+                <!--宝贝 end-->
+                <div class="search-1">
+           				<p class="sear-box">
+                        	<i  class="sear-ico"></i>
+                        </p>
+                        <input  type="text" placeholder="搜索流行商品" class="searchkey"/>
+                        <!--searchput end!-->
+                        <div class="search-2">
+                        		<input type="submit" value="搜索"/>
+                        </div>
+                </div>
+        </div>
+</div>
+		<!--logo end!-->
+     <div class="banner-box">
+     		<ul class="b-nav clearfix">
+            		<li class="nav-home">
+                    <a href="#">首页</a>
+                    </li>
+                    <li  class="nav-hot">
+                    <a href="#">今日最热</a>
+                    </li>
+                     <li class="nav-clothes" >
+                    <a href="#">衣服
+                    	<i class="nav-ico"></i>
+                   </a>
+                   <p class="clo-sub">
+                        <a href="#" class="clo-sub1">上衣</a>
+                       
+                         <a href="#" class="clo-sub1">裙子</a>
+                        <a href="#" class="clo-sub1">裤子</a>
+                          <a href="#" class="clo-sub1">内衣</a>
+                    </p>
+                    </li>
+                     <li >
+                    <a href="#">鞋子</a>
+                    </li>
+                     <li >
+                    <a href="#">包包</a>
+                    </li>
+                     <li >
+                    <a href="#">配饰</a>
+                    </li>
+                     <li >
+                    <a href="#">美妆</a>
+                    </li>
+                     <li >
+                    <a href="#">特卖</a>
+                    </li>
+                     <li >
+                    <a href="#">团购</a>
+                    </li>
+                     <li >
+                    <a href="#">好店</a>
+                    </li>
+                     <li >
+                    <a href="#">杂志</a>
+                    </li>
+                     <li  class="nav-last">
+                    <a href="#">爱美丽Club
+                    <i class="nav-ico1"></i>
+                    </a>
+                    <p  class="beat-sub">
+                     <a href="#" class="beat-sub1">达人</a>
+                     <a href="#" class="beat-sub1">福利社</a>
+                     <a href="#" class="beat-sub1">EXO-M粉丝专区</a>
+					</p>
+                    </li>
+            </ul>
+     </div>
+     <!--banner end-->
+     <div class="bg-box">
+     		<div class="bg-pic"> </div>
+             <!--bg-pic end-->
+                    <div class="bg-left">
+                    			<div class="list-conbox clearfix">
+                    					<ul class="left-list">
+                            				<li class="list-hot">
+                                            		<h3 class="list-title">
+                                                    	<a href="#">最热</a>
+                                                    </h3>
+                                                    <p class="list-con">
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" class="con1">毛衣</a>
+                                                            <a href="#">活力运动鞋</a>
+                                                            <a href="#" >连衣裙</a>
+                                                            <a href="#" class="con1">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#">外套</a>
+                                                            <a href="#" class="con1">入冬打底裤</a>  
+                                                            <span class="corner"></span>               
+                                                    </p> 
+                                                    		</li>
+                           				 </ul>
+                                        <ul class="submenu">
+                                                            		<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                                    	<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                                    	<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                            </ul>  
+                                    </div>   
+                                    <div class="list-conbox clearfix">
+                    					<ul class="left-list">
+                            				<li class="list-hot">
+                                            		<h3 class="list-title">
+                                                    	<a href="#">最热</a>
+                                                    </h3>
+                                                    <p class="list-con">
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" class="con1">毛衣</a>
+                                                            <a href="#">活力运动鞋</a>
+                                                            <a href="#" >连衣裙</a>
+                                                            <a href="#" class="con1">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#">外套</a>
+                                                            <a href="#" class="con1">入冬打底裤</a>  
+                                                            <span class="corner"></span>               
+                                                    </p> 
+                                                    		</li>
+                           				 </ul>
+                                        <ul class="submenu">
+                                                            		<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                                    	<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                                    	<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                            </ul>  
+                                    </div>
+                                      <div class="list-conbox clearfix">
+                    					<ul class="left-list">
+                            				<li class="list-hot">
+                                            		<h3 class="list-title">
+                                                    	<a href="#">最热</a>
+                                                    </h3>
+                                                    <p class="list-con">
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" class="con1">毛衣</a>
+                                                            <a href="#">活力运动鞋</a>
+                                                            <a href="#" >连衣裙</a>
+                                                            <a href="#" class="con1">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#">外套</a>
+                                                            <a href="#" class="con1">入冬打底裤</a>  
+                                                            <span class="corner"></span>               
+                                                    </p> 
+                                                    		</li>
+                           				 </ul>
+                                        <ul class="submenu">
+                                                            		<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                                    	<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                                    	<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                            </ul>  
+                                    </div>
+                                      <div class="list-conbox clearfix">
+                    					<ul class="left-list">
+                            				<li class="list-hot">
+                                            		<h3 class="list-title">
+                                                    	<a href="#">最热</a>
+                                                    </h3>
+                                                    <p class="list-con">
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" class="con1">毛衣</a>
+                                                            <a href="#">活力运动鞋</a>
+                                                            <a href="#" >连衣裙</a>
+                                                            <a href="#" class="con1">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#">外套</a>
+                                                            <a href="#" class="con1">入冬打底裤</a>  
+                                                            <span class="corner"></span>               
+                                                    </p> 
+                                                    		</li>
+                           				 </ul>
+                                        <ul class="submenu">
+                                                            		<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                                    	<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                                    	<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                            </ul>  
+                                    </div>
+                                      <div class="list-conbox add1 clearfix">
+                    					<ul class="left-list">
+                            				<li class="list-hot add">
+                                            		<h3 class="list-title">
+                                                    	<a href="#">最热</a>
+                                                    </h3>
+                                                    <p class="list-con">
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" class="con1">毛衣</a>
+                                                            <a href="#">活力运动鞋</a>
+                                                            <a href="#" >连衣裙</a>
+                                                            <a href="#" class="con1">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#">外套</a>
+                                                            <a href="#" class="con1">入冬打底裤</a>  
+                                                            <span class="corner"></span>               
+                                                    </p> 
+                                                    		</li>
+                           				 </ul>
+                                        <ul class="submenu">
+                                                            		<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                                    	<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                                    	<li class="submenu-title">
+                                                                    		<h4 >
+                                                                            <a href="#">本季最in风尚</a>
+                                                                            </h4>
+                                                             <p>
+                                                    		<a href="#">冬季新品</a>
+                                                            <a href="#" >毛衣</a>
+                                                            <a href="#">连衣裙</a>
+                                                            <a href="#" >时髦牛仔裤</a>
+                                                            <a href="#" >卫衣</a>
+                                                            <a href="#" >超人气套装</a>
+                                                            <a href="#">新款靴子</a>
+                                                            <a href="#">单肩包</a>
+                                                            <a href="#">暖冬美裤</a>
+                                                            <a href="#" >活力运动鞋</a>  
+                                                            <a href="#" >唯美蕾丝</a>  
+                                                            <a href="#" >外套</a>  
+                                                            </p> 
+                                                                    </li>
+                                                            </ul>  
+                                    </div>
+                    </div>   
+                    <!--bg-left end--> 
+                    <div class="bg-right">
+                    			<a href="#">
+                                		<img src="img/bg-right1.jpg" />
+                                </a>
+                                <a href="#">
+                                		<img src="img/bg-right2.jpg" />
+                                </a>
+                                <a href="#">
+ 										<img src="img/bg-right3.jpg" />                               
+                                </a>
+                    </div>
+                    <!--bg-right end-->
+                    	<div class="bnr-box">
+                        		<ul class="bnr-list clearfix">
+                                		<li>
+                                        	<a href="#"> <img src="img/bnr-pic1.jpg" /></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#"> <img src="img/bnr-pic2.jpg" /></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#"> <img src="img/bnr-pic3.jpg" /></a>
+                                        </li>
+                                         <li>
+                                        	<a href="#"> <img src="img/bnr-pic4.jpg" /></a>
+                                        </li>
+                                        <li class="ads-one">
+                                        		<a href="#">
+                                                		<img src="img/bnr-pic5.jpg" />
+                                                </a>
+                                        </li>
+                                </ul>
+                       </div>      
+      </div>
+        <!--bnr-box end-->
+      			<div class="sp-wrap">
+                			<div class="title-box">
+                            		<h2  class="sp-title">人气推荐单品</h2>
+                            </div>
+                            <ul class="sp-sku clearfix">
+                            		<li>
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="美丽无上限 不到50元 ">
+                                                		<img src="img/p-single1.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">美丽无上限 不到50元</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥49.00</span>
+                                                <span class="price">￥189.00</span>
+                                          </p>
+                                            <p class="price-num">1885人已购买</p>
+                                    </li>
+                                    <li>
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="高人气基础白衬衫 打底外穿都时尚 ">
+                                                		<img src="img/p-single2.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">高人气基础白衬衫 打底外穿都时尚</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥49.00</span>
+                                                <span class="price">￥98.00</span>
+                                          </p>
+                                            <p class="price-num">3255人已购买</p>
+                                    </li>
+                                    <li>
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="好评不断白菜价短靴 天天都过双12 ">
+                                                		<img src="img/p-single3.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">好评不断白菜价短靴 天天都过双12</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥79.00</span>
+                                                <span class="price">￥238.00</span>
+                                          </p>
+                                            <p class="price-num">325人已购买</p>
+                                    </li>  
+                                    <li>
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="显瘦针织衫连衣裙 4色3码任你选 ">
+                                                		<img src="img/p-single4.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">显瘦针织衫连衣裙 4色3码任你选</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥108.00</span>
+                                                <span class="price">￥360.00</span>
+                                          </p>
+                                            <p class="price-num">920人已购买</p>
+                                    </li>
+                                    <li>
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="招财猫加厚手套 最新萌物让你融化 ">
+                                                		<img src="img/p-single5.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">招财猫加厚手套 最新萌物让你融化</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥42.00</span>
+                                                <span class="price">￥150.00</span>
+                                          </p>
+                                            <p class="price-num">561人已购买</p>
+                                    </li>
+                                    <li class="last">
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="加绒运动裤 双十二余热购不停 ">
+                                                		<img src="img/p-single6.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">加绒运动裤 双十二余热购不停</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥59.00</span>
+                                                <span class="price">￥118.00</span>
+                                          </p>
+                                            <p class="price-num">452人已购买</p>
+                                    </li>
+                                     <li>
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="有效吸附深沉污垢，我的心机黑珍珠黑面膜8片 ">
+                                                		<img src="img/p-single7.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">有效吸附深沉污垢，我的心机黑珍珠黑面膜8片</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥48.00</span>
+                                                <span class="price">￥128.00</span>
+                                          </p>
+                                            <p class="price-num">4463人已购买</p>
+                                    </li>
+                                    <li>
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="二千御用，自然不脱色。四季物语蓝宝石悦色水润唇膏3.5g ">
+                                                		<img src="img/p-single8.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">二千御用，自然不脱色。四季物语蓝宝石悦色水润唇膏3.5g</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥29.00</span>
+                                                <span class="price">￥139.00</span>
+                                          </p>
+                                            <p class="price-num">15259人已购买</p>
+                                    </li>
+                                   	 <li>
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="人手一支的入门款隔离！Za新能真皙美白隔离霜35g ">
+                                                		<img src="img/p-single9.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">人手一支的入门款隔离！Za新能真皙美白隔离霜35g</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥54.80</span>
+                                                <span class="price">￥78.00</span>
+                                          </p>
+                                            <p class="price-num">13439人已购买</p>
+                                    </li>  
+                              	      <li>
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="大眼的诱惑~韩熙贞 专业彩妆套装6件 ">
+                                                		<img src="img/p-single10.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">大眼的诱惑~韩熙贞 专业彩妆套装6件</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥98.00</span>
+                                                <span class="price">￥488.00</span>
+                                          </p>
+                                            <p class="price-num">3510人已购买</p>
+                                    </li>
+                                    <li>
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="用一下，痘印瞬间隐形！玻孔达人隐形膏20g ">
+                                                		<img src="img/p-single11.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">用一下，痘印瞬间隐形！玻孔达人隐形膏20g</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥55.00</span>
+                                                <span class="price">￥109.00</span>
+                                          </p>
+                                            <p class="price-num">6419人已购买</p>
+                                    </li>
+                                 	   <li class="last">
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="四季不脱妆，全靠这一步~美康粉黛 玫瑰粉饼10g ">
+                                                		<img src="img/p-single12.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">四季不脱妆，全靠这一步~美康粉黛 玫瑰粉饼10g</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥35.00</span>
+                                                <span class="price">￥78.00</span>
+                                          </p>
+                                            <p class="price-num">5488人已购买</p>
+                                    </li>
+                            </ul>
+                </div>
+                	<!--sp-wrap end-->
+               	<div class="auto-wrap">
+                			<div class="auto-box clearfix">
+                            		<a href="#" class="more">
+                                    	查看所有团购
+                                        <span></span>
+                                    </a>
+                            		<h2  class="auto-title">每日超值团购</h2>
+                            </div>
+                            <ul class="auto-sku clearfix">
+                            		 <li>
+                                    	<div class="auto-picbox">
+                                        		<a href="#" title="荧光色针织帽 ">
+                                                		<img src="img/auto1.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">荧光色针织帽</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥9.90</span>
+                                                <span class="price">￥45.00</span>
+                                          </p>
+                                            <p class="price-num">3179人已参加</p>
+                                    </li>    
+                                     <li>
+                                    	<div class="auto-picbox">
+                                        		<a href="#" title="小香风毛绒套装 ">
+                                                		<img src="img/auto2.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">小香风毛绒套装</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥99.00</span>
+                                                <span class="price">￥296.00</span>
+                                          </p>
+                                            <p class="price-num">1355人已参加</p>
+                                    </li>   
+                                    <li>
+                                    	<div class="auto-picbox">
+                                        		<a href="#" title="弹力修身加绒PU皮裤 ">
+                                                		<img src="img/auto3.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">弹力修身加绒PU皮裤</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥59.80</span>
+                                                <span class="price">￥264.00</span>
+                                          </p>
+                                            <p class="price-num">2070人已参加</p>
+                                    </li>   
+                                    <li>
+                                    	<div class="auto-picbox">
+                                        		<a href="#" title="过膝长靴 ">
+                                                		<img src="img/auto4.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">过膝长靴</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥62.00</span>
+                                                <span class="price">￥75.00</span>
+                                          </p>
+                                            <p class="price-num">5055人已参加</p>
+                                    </li>   
+                                    <li>
+                                    	<div class="auto-picbox">
+                                        		<a href="#" title="连帽中长款加厚棉衣 ">
+                                                		<img src="img/auto5.jpg" />
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">连帽中长款加厚棉衣</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥118.00</span>
+                                                <span class="price">￥258.00</span>
+                                          </p>
+                                            <p class="price-num">2139人已参加</p>
+                                    </li>   
+                                      <li class="last">
+                                    	<div class="sp-picbox">
+                                        		<a href="#" title="子母拉杆箱 ">
+                                                		<img  src="img/auto6.jpg"/>
+                                                </a>
+                                        </div>
+                                        <p class="sp-text">
+                                        		<a href="#">子母拉杆箱</a>
+                                        </p>
+                                          <p class="price-box">
+                                          		<span class="price-red">￥129.00</span>
+                                                <span class="price">￥500.00</span>
+                                          </p>
+                                            <p class="price-num">10228人已购买</p>
+                                    </li>  
+                            </ul>
+                </div>
+               <!-- auto-wrap end-->
+               <div class="src-pic-box">
+               			<a href="#" class="src-pic">
+                        </a>
+               </div>
+               	<!--src-pic end-->
+                <div class="opa-wrap clearfix ">
+                		<div class="opa-box clearfix fl">
+                            		<a href="#" class="more">
+                                    	查看所有衣服
+                                        <span></span>
+                                    </a>
+                            		<h2  class="opa-title">
+                                    		<span class="ico-clo">衣服</span>
+                                            <span class="today">今日上新<strong>4098</strong>件</span>
+                                    </h2>
+                            </div>
+                            <!--opa-box-->
+                            		<div class="pro-box fl">
+                                    			<ul class="pic-box clearfix">
+                                                		<li>
+                                                        	<a href="#" title="本季最CHIC套装">
+                                                            	<img src="img/opa1.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">本季最CHIC套装</span>
+                                                             </a>
+                                                        </li>
+                                                   	       <li>
+                                                        	<a href="#" title="冬季实穿连衣裙">
+                                                            	<img src="img/opa2.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">冬季实穿连衣裙</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="简约休闲毛衣">
+                                                            	<img src="img/opa3.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">简约休闲毛衣</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="入冬必穿打底裤">
+                                                            	<img src="img/opa4.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">入冬必穿打底裤</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="秋冬美裙任你选">
+                                                            	<img src="img/opa5.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">秋冬美裙任你选</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="个性卫衣随意穿">
+                                                            	<img src="img/opa6.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">个性卫衣随意穿</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="秋冬至in半身裙">
+                                                            	<img src="img/opa7.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">秋冬至in半身裙</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="本季当红外套">
+                                                            	<img src="img/opa8.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">本季当红外套</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="百变打底衫">
+                                                            	<img src="img/opa9.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">百变打底衫</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="达人必备小脚裤">
+                                                            	<img src="img/opa10.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">达人必备小脚裤</span>
+                                                             </a>
+                                                        </li>
+                                                </ul>
+                                                <ul class="pro-words clearfix">
+                                                        <li >
+                                                                 <h2>上衣</h2>
+                                                                  <p>
+                                                                  		<a href="#">背心</a>
+                                                                        <a href="#">针织衫</a>
+                                                                        <a href="#">打底衫</a>
+                                                                        <a href="#">衬衫</a>
+                                                                        <a href="#">卫衣</a>
+                                                                        <a href="#">情侣装</a>
+                                                                        <a href="#">外套</a>
+                                                                        <a href="#">韩范儿T恤</a>
+                                                                        <a href="#">小西装</a>
+                                                                        <a href="#">马甲</a>
+                                                                  </p>
+                                                        </li>
+                                                        <li >
+                                                                 <h2>裙子</h2>
+                                                                  <p>
+                                                                  		<a href="#">连衣裙</a>
+                                                                        <a href="#">半身裙</a>
+                                                                        <a href="#">长袖连衣裙</a>
+                                                                        <a href="#">秋冬美裙</a>
+                                                                        <a href="#">最受欢迎裙子榜</a>
+                                                                        <a href="#">衣裙套装</a>
+                                                                        <a href="#">A字裙</a>
+                                                                        <a href="#">长裙</a>
+                                                                  </p>
+                                                        </li>
+                                                        <li  class="last">
+                                                                 <h2>裤子</h2>
+                                                                  <p>
+                                                                  		<a href="#">九分裤</a>
+                                                                        <a href="#">短裤</a>
+                                                                        <a href="#">背带裤</a>
+                                                                        <a href="#">小脚裤</a>
+                                                                        <a href="#">高腰裤</a>
+                                                                        <a href="#">牛仔裤</a>
+                                                                        <a href="#">哈伦裤</a>
+                                                                        <a href="#">打底裤</a>
+                                                                        <a href="#">西装裤</a>
+                                                                        <a href="#">运动裤</a>
+                                                                  </p>
+                                                        </li>
+                                                </ul>
+                                    </div>
+                       				 <!--pro-box-->
+                                 <div class="pro-shop fr">
+                                 			<div class="pro-title clearfix">
+                                            		<h3>最热衣服好店</h3>
+                                                    <a href="#" class="more">
+                                    				更多好店
+                                    			    <span></span>
+                                    				</a>
+                                            </div>
+                                            <ul class="pro-list">
+                                            		<li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/pro1.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">妖精的衣橱</a>
+                                                            </p>
+                                                            <p class="con-text">235件商品/总销量84572</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/pro2.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">1313气场女装</a>
+                                                            </p>
+                                                            <p class="con-text">238件商品/总销量71856</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/pro3.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">nnassa旗舰店</a>
+                                                            </p>
+                                                            <p class="con-text">484件商品/总销量75222</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/pro4.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">我是可清</a>
+                                                            </p>
+                                                            <p class="con-text">154件商品/总销量95936</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/pro5.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">花猫女装</a>
+                                                            </p>
+                                                            <p class="con-text">336件商品/总销量65136</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/pro6.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">专衣</a>
+                                                            </p>
+                                                            <p class="con-text">295件商品/总销量92594</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/pro7.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">TENOE天妖</a>
+                                                            </p>
+                                                            <p class="con-text">247件商品/总销量36546</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/pro8.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">wencoco</a>
+                                                            </p>
+                                                            <p class="con-text">473件商品/总销量47894</p>
+                                                    </li>
+                                                    <li class="last">
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/pro9.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">cocobella旗舰店</a>
+                                                            </p>
+                                                            <p class="con-text">105件商品/总销量13381</p>
+                                                    </li>
+                                            </ul>
+                                 </div>         
+                                   <!--pro-shop-->
+                </div>
+                 <!--opa-wrap end-->
+            	  <div class="opa-wrap clearfix ">
+                		<div class="opa-box clearfix fl">
+                            		<a href="#" class="more">
+                                    	查看所有鞋子
+                                        <span></span>
+                                    </a>
+                            		<h2  class="opa-title">
+                                    		<span class="ico-clo add">鞋子</span>
+                                            <span class="today">今日上新<strong>6876</strong>件</span>
+                                    </h2>
+                            </div>
+                            <!--opa-box-->
+                            		<div class="pro-box fl">
+                                    			<ul class="pic-box clearfix">
+                                                		<li>
+                                                        	<a href="#" title="青春活力运动鞋">
+                                                            	<img src="img/shoe1.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">青春活力运动鞋</span>
+                                                             </a>
+                                                        </li>
+                                                   	       <li>
+                                                        	<a href="#" title="萌萌哒的豆豆鞋">
+                                                            	<img src="img/shoe2.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">萌萌哒的豆豆鞋</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="时尚保暖美长靴">
+                                                            	<img src="img/shoe3.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">时尚保暖美长靴</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="领跑秋冬雪地靴">
+                                                            	<img src="img/shoe4.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">领跑秋冬雪地靴</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="潮流至in俏短靴">
+                                                            	<img src="img/shoe5.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">潮流至in俏短靴</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="优质热销美鞋">
+                                                            	<img src="img/shoe6.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">优质热销美鞋</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="秋冬美鞋海量选">
+                                                            	<img src="img/shoe7.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">秋冬美鞋海量选</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="换季美靴凹类型">
+                                                            	<img src="img/shoe8.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">换季美靴凹类型</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="娇小MM爱粗跟">
+                                                            	<img src="img/shoe9.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">娇小MM爱粗跟</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="令人心动の“美高跟”">
+                                                            	<img src="img/shoe10.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">令人心动の"美高跟"</span>
+                                                             </a>
+                                                        </li>
+                                                </ul>
+                                                <ul class="pro-words clearfix">
+                                                        <li >
+                                                                 <h2>休闲</h2>
+                                                                  <p>
+                                                                  		<a href="#">一脚蹬</a>
+                                                                        <a href="#">休闲鞋</a>
+                                                                        <a href="#">帆布鞋</a>
+                                                                        <a href="#">运动鞋</a>
+                                                                        <a href="#">高帮鞋</a>
+                                                                        <a href="#">豆豆鞋</a>
+                                                                        <a href="#">便鞋</a>
+                                                                        <a href="#">厚底运动鞋</a>
+                                                                        <a href="#">拖鞋</a>
+                                                                  </p>
+                                                        </li>
+                                                        <li >
+                                                                 <h2>潮流</h2>
+                                                                  <p>
+                                                                  		<a href="#">平底鞋</a>
+                                                                        <a href="#">厚底鞋</a>
+                                                                        <a href="#">牛津鞋</a>
+                                                                        <a href="#">松糕鞋</a>
+                                                                        <a href="#">雪地靴</a>
+                                                                        <a href="#">乐福鞋</a>
+                                                                        <a href="#">内增高运动鞋</a>
+                                                                        <a href="#">短靴</a>
+                                                                         <a href="#">马丁靴</a>
+                                                                  </p>
+                                                        </li>
+                                                        <li  class="last">
+                                                                 <h2>时尚</h2>
+                                                                  <p>
+                                                                  		<a href="#">高跟鞋</a>
+                                                                        <a href="#">平底短靴</a>
+                                                                        <a href="#">坡跟鞋</a>
+                                                                        <a href="#">粗跟鞋</a>
+                                                                        <a href="#">棉鞋</a>
+                                                                        <a href="#">尖头鞋</a>
+                                                                        <a href="#">及裸靴</a>
+                                                                        <a href="#">切尔西靴</a>
+                                                                        <a href="#">高跟短靴</a>                              
+                                                                  </p>
+                                                        </li>
+                                                </ul>
+                                    </div>
+                       				 <!--pro-box-->
+                                 <div class="pro-shop fr">
+                                 			<div class="pro-title clearfix">
+                                            		<h3>最热鞋子好店</h3>
+                                                    <a href="#" class="more">
+                                    				更多好店
+                                    			    <span></span>
+                                    				</a>
+                                            </div>
+                                            <ul class="pro-list">
+                                            		<li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/shoe11.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">左右时尚</a>
+                                                            </p>
+                                                            <p class="con-text">2060件商品/总销量53197</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/shoe12.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">funny shoes</a>
+                                                            </p>
+                                                            <p class="con-text">801件商品/总销量55840</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/shoe13.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">谁叫我是周杰伦</a>
+                                                            </p>
+                                                            <p class="con-text">497件商品/总销量56313</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/shoe14.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">涩琪女鞋</a>
+                                                            </p>
+                                                            <p class="con-text">324件商品/总销量51501</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/shoe15.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">唯美女鞋馆</a>
+                                                            </p>
+                                                            <p class="con-text">281件商品/总销量49329</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/shoe16.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">米小兔</a>
+                                                            </p>
+                                                            <p class="con-text">185件商品/总销量37389</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/shoe17.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">原木家</a>
+                                                            </p>
+                                                            <p class="con-text">121件商品/总销量33114</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/shoe18.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">YOYO潮品</a>
+                                                            </p>
+                                                            <p class="con-text">109件商品/总销量8708</p>
+                                                    </li>
+                                                    <li class="last">
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/shoe19.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">Rmatt旗舰店</a>
+                                                            </p>
+                                                            <p class="con-text">76件商品/总销量798</p>
+                                                    </li>
+                                            </ul>
+                                 </div>         
+                                   <!--pro-shop end-->
+                </div>   
+                   <!--opa-wrap end-->  
+                    <div class="opa-wrap clearfix ">
+                		<div class="opa-box clearfix fl">
+                            		<a href="#" class="more">
+                                    	查看所有包包
+                                        <span></span>
+                                    </a>
+                            		<h2  class="opa-title">
+                                    		<span class="ico-clo add1">包包</span>
+                                            <span class="today">今日上新<strong>1485</strong>件</span>
+                                    </h2>
+                            </div>
+                            <!--opa-box-->
+                            		<div class="pro-box fl">
+                                    			<ul class="pic-box clearfix">
+                                                		<li>
+                                                        	<a href="#" title="爱不释手の时髦包包">
+                                                            	<img src="img/bag1.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">爱不释手の时髦包包</span>
+                                                             </a>
+                                                        </li>
+                                                   	       <li>
+                                                        	<a href="#" title="爱不释手の聚财神器">
+                                                            	<img src="img/bag2.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">爱不释手の聚财神器</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="搜罗2014冬季新款">
+                                                            	<img src="img/bag3.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">搜罗2014冬季新款</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="明星都爱の斜挎包">
+                                                            	<img src="img/bag4.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">明星都爱の斜挎包</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="实时最新款包包">
+                                                            	<img src="img/bag5.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">实时最新款包包</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="背上最潮双肩包">
+                                                            	<img src="img/bag6.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">背上最潮双肩包</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="明星逛街首选大包">
+                                                            	<img src="img/bag7.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">明星逛街首选大包</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="秀出の个性去旅行">
+                                                            	<img src="img/bag8.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">秀出の个性去旅行</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="妹子最喜爱の包包">
+                                                            	<img src="img/bag9.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">妹子最喜爱の包包</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="时尚与实用の完美结合">
+                                                            	<img src="img/bag10.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">时尚与实用の完美结合</span>
+                                                             </a>
+                                                        </li>
+                                                </ul>
+                                                <ul class="pro-words clearfix">
+                                                        <li >
+                                                                 <h2>潮流</h2>
+                                                                  <p>
+                                                                  		<a href="#">复古包</a>
+                                                                        <a href="#">邮差包</a>
+                                                                        <a href="#">机车包</a>
+                                                                        <a href="#">长款钱包</a>
+                                                                        <a href="#">真皮包</a>
+                                                                        <a href="#">休闲双肩包</a>
+                                                                        <a href="#">最受欢迎包包榜单</a>
+                                                                        <a href="#">信封包</a>
+                                                                  </p>
+                                                        </li>
+                                                        <li >
+                                                                 <h2>甜美</h2>
+                                                                  <p>
+                                                                  		<a href="#">学院双肩包</a>
+                                                                        <a href="#">小包</a>
+                                                                        <a href="#">贝壳包</a>
+                                                                        <a href="#">链条包</a>
+                                                                        <a href="#">手拿包</a>
+                                                                        <a href="#">韩版包</a>
+                                                                        <a href="#">约会LOOK包包</a>
+                                                                        <a href="#">水桶包</a>
+                                                                         <a href="#">斜挎包</a>
+                                                                  </p>
+                                                        </li>
+                                                        <li  class="last">
+                                                                 <h2>百搭</h2>
+                                                                  <p>
+                                                                  		<a href="#">2014秋冬新款包包</a>
+                                                                        <a href="#">双肩包</a>
+                                                                        <a href="#">单肩包</a>
+                                                                        <a href="#">行李箱</a>
+                                                                        <a href="#">钱包</a>
+                                                                        <a href="#">大包</a>
+                                                                        <a href="#">买手精选新品包包</a>
+                                                                        <a href="#">性价比包包</a>                         
+                                                                  </p>
+                                                        </li>
+                                                </ul>
+                                    </div>
+                       				 <!--pro-box-->
+                                 <div class="pro-shop fr">
+                                 			<div class="pro-title clearfix">
+                                            		<h3>最热包包好店</h3>
+                                                    <a href="#" class="more">
+                                    				更多好店
+                                    			    <span></span>
+                                    				</a>
+                                            </div>
+                                            <ul class="pro-list">
+                                            		<li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/bag11.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">金金韩国美包馆</a>
+                                                            </p>
+                                                            <p class="con-text">798件商品/总销量101918</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/bag12.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">HOW.R.U优哈优哈官方旗舰店</a>
+                                                            </p>
+                                                            <p class="con-text">94件商品/总销量8534</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/bag13.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">索女箱包旗舰店</a>
+                                                            </p>
+                                                            <p class="con-text">315件商品/总销量113891</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/bag14.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">闺蜜淘货</a>
+                                                            </p>
+                                                            <p class="con-text">49件商品/总销量32609</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/bag15.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">乐乐潮流包铺</a>
+                                                            </p>
+                                                            <p class="con-text">237件商品/总销量14775</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/shoe16.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">萝拉原创</a>
+                                                            </p>
+                                                            <p class="con-text">111件商品/总销量20773</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/bag17.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">小象包装旗舰店</a>
+                                                            </p>
+                                                            <p class="con-text">68件商品/总销量13726</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/bag18.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">优尚良品</a>
+                                                            </p>
+                                                            <p class="con-text">202件商品/总销量52221</p>
+                                                    </li>
+                                                    <li class="last">
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/bag19.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">森林小屋</a>
+                                                            </p>
+                                                            <p class="con-text">141件商品/总销量27217</p>
+                                                    </li>
+                                            </ul>
+                                 </div>         
+                                   <!--pro-shop end-->
+                </div>   
+                 <!--opa-wrap end-->    
+                     <div class="opa-wrap clearfix ">
+                		<div class="opa-box clearfix fl">
+                            		<a href="#" class="more">
+                                    	查看所有配饰
+                                        <span></span>
+                                    </a>
+                            		<h2  class="opa-title">
+                                    		<span class="ico-clo add2">配饰</span>
+                                            <span class="today">今日上新<strong>2039</strong>件</span>
+                                    </h2>
+                            </div>
+                            <!--opa-box-->
+                            		<div class="pro-box fl">
+                                    			<ul class="pic-box clearfix">
+                                                		<li>
+                                                        	<a href="#" title="显瘦连裤袜">
+                                                            	<img src="img/acc1.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">显瘦连裤袜</span>
+                                                             </a>
+                                                        </li>
+                                                   	       <li>
+                                                        	<a href="#" title="温暖围巾">
+                                                            	<img src="img/acc2.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">温暖围巾</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="新款帽子">
+                                                            	<img src="img/acc3.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">新款帽</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="可爱手机壳">
+                                                            	<img src="img/acc4.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">可爱手机壳</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="精美手表">
+                                                            	<img src="img/acc5.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">精美手表</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="个性耳钉">
+                                                            	<img src="img/acc6.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">个性耳钉</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="点睛项链">
+                                                            	<img src="img/acc7.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">点睛项链</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="保暖袜子">
+                                                            	<img src="img/acc8.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">保暖袜子</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="买手精选">
+                                                            	<img src="img/acc9.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">买手精选</span>
+                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                        	<a href="#" title="韩式发箍">
+                                                            	<img src="img/acc10.jpg" />
+                                                            </a>
+                                                            <a href="#" class="opa">
+                                                            	<img src="img/bar_bg.png" />
+                                                                <span class="con">韩式发箍</span>
+                                                             </a>
+                                                        </li>
+                                                </ul>
+                                                <ul class="pro-words clearfix">
+                                                        <li >
+                                                                 <h2>早春</h2>
+                                                                  <p>
+                                                                  		<a href="#">脚链</a>
+                                                                        <a href="#">胸针</a>
+                                                                        <a href="#">头花</a>
+                                                                        <a href="#">胸花</a>
+                                                                        <a href="#">发带</a>
+                                                                        <a href="#">丝巾</a>
+                                                                        <a href="#">袜子</a>
+                                                                        <a href="#">连裤袜</a>
+                                                                        <a href="#">丝袜</a>
+                                                                        <a href="#">帽子</a>
+                                                                  </p>
+                                                        </li>
+                                                        <li >
+                                                                 <h2>首饰</h2>
+                                                                  <p>
+                                                                  		<a href="#">项链</a>
+                                                                        <a href="#">手镯</a>
+                                                                        <a href="#">手链</a>
+                                                                        <a href="#">戒指</a>
+                                                                        <a href="#">耳环</a>
+                                                                        <a href="#">耳钉</a>
+                                                                        <a href="#">锁骨链</a>
+                                                                        <a href="#">复古项链</a>
+                                                                         <a href="#">毛衣链</a>
+                                                                         <a href="#">对戒</a>
+                                                                  </p>
+                                                        </li>
+                                                        <li  class="last">
+                                                                 <h2>装扮</h2>
+                                                                  <p>
+                                                                  		<a href="#">腰带</a>
+                                                                        <a href="#">围巾</a>
+                                                                        <a href="#">手表</a>
+                                                                        <a href="#">发饰</a>
+                                                                        <a href="#">眼镜框</a>
+                                                                        <a href="#">墨镜</a>
+                                                                        <a href="#">假领子</a>                         
+                                                                  </p>
+                                                        </li>
+                                                </ul>
+                                    </div>
+                       				 <!--pro-box-->
+                                 <div class="pro-shop fr">
+                                 			<div class="pro-title clearfix">
+                                            		<h3>最热配饰好店</h3>
+                                                    <a href="#" class="more">
+                                    				更多好店
+                                    			    <span></span>
+                                    				</a>
+                                            </div>
+                                            <ul class="pro-list">
+                                            		<li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/acc11.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">风吹麦浪</a>
+                                                            </p>
+                                                            <p class="con-text">434件商品/总销量228377</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/acc12.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">倾城之恋</a>
+                                                            </p>
+                                                            <p class="con-text">345件商品/总销量171085</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/acc13.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">梦境小屋</a>
+                                                            </p>
+                                                            <p class="con-text">360件商品/总销量44146</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/acc14.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">果然Home</a>
+                                                            </p>
+                                                            <p class="con-text">99件商品/总销量34403</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/acc15.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">Smile。Watch</a>
+                                                            </p>
+                                                            <p class="con-text">307件商品/总销量116193</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/acc16.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">爱莎小铺</a>
+                                                            </p>
+                                                            <p class="con-text">398件商品/总销量27804</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/acc17.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">DaisyRose旗舰店</a>
+                                                            </p>
+                                                            <p class="con-text">108件商品/总销量8619</p>
+                                                    </li>
+                                                    <li>
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/acc18.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">米米家</a>
+                                                            </p>
+                                                            <p class="con-text">449件商品/总销量134065</p>
+                                                    </li>
+                                                    <li class="last">
+                                                    		<a href="#" class="pro-con">
+                                                            	<img src="img/acc19.jpg" />
+                                                            </a>
+                                                            <p class="con-name">
+                                                            	<a href="#">心饰心妤</a>
+                                                            </p>
+                                                            <p class="con-text">351件商品/总销量65550</p>
+                                                    </li>
+                                            </ul>
+                                 </div>         
+                                   <!--pro-shop end-->
+                  </div>   
+                 <!--opa-wrap end-->  
+                 	<div class="maga-wrap">
+                			<div class="maga-box clearfix">
+                            		<h2  class="maga-title fl">热门杂志</h2>
+                                  			 <p class="maga-words fr" >
+                                            	<a href="#" >欧美</a>
+                                            	<a href="#">甜美</a>
+                                                <a href="#">复古</a>
+                                                <a href="#">个性</a>
+                                            	<a href="#">日系</a>
+                                            	<a href="#">其他</a>
+                                            	<a href="#" class="maga-last">
+                                                	更多杂志
+                                                	<span class="maga-ico"></span>
+                                                </a>
+                                    		</p>
+                            </div>
+                    				<ul class="maga-con clearfix">
+                                    		<li class="maga-group">
+                                            	<div class="group-box">
+                                            		<h3>
+                                                    	<a href="#">小女人有恋物癖</a>
+                                                    </h3>
+                                                    <a href="#">
+                                                    	<img src="img/group1.jpg" />
+                                                    </a>
+                                                    <div class="lookbox clearfix"> 		
+                                                            <span>886个分享</span>
+                                                            <a href="#" class="look-btn fr">去看看</a>
+                                                    </div>
+					                       	</div>
+                                            </li>
+                                            <li class="maga-group">
+                                            	<div class="group-box">
+                                            		<h3>
+                                                    	<a href="#">怪诞文艺腔</a>
+                                                    </h3>
+                                                    <a href="#">
+                                                    	<img src="img/group2.jpg" />
+                                                    </a>
+                                                    <div class="lookbox clearfix"> 		
+                                                            <span>2413个分享</span>
+                                                            <a href="#" class="look-btn fr">去看看</a>
+                                                    </div>
+					                       	</div>
+                                            </li>
+                                            <li class="maga-group">
+                                            	<div class="group-box">
+                                            		<h3>
+                                                    	<a href="#">每个人有它的脾气</a>
+                                                    </h3>
+                                                    <a href="#">
+                                                    	<img src="img/group3.jpg" />
+                                                    </a>
+                                                    <div class="lookbox clearfix"> 		
+                                                            <span>234个分享</span>
+                                                            <a href="#" class="look-btn fr">去看看</a>
+                                                    </div>
+					                       	</div>
+                                            </li>
+                                            <li class="maga-group">
+                                            	<div class="group-box">
+                                            		<h3>
+                                                    	<a href="#">craft</a>
+                                                    </h3>
+                                                    <a href="#">
+                                                    	<img src="img/group4.jpg" />
+                                                    </a>
+                                                    <div class="lookbox clearfix"> 		
+                                                            <span>1521个分享</span>
+                                                            <a href="#" class="look-btn fr">去看看</a>
+                                                    </div>
+					                       	</div>
+                                            </li>
+                                            <li class="maga-group last">
+                                            	<div class="group-box">
+                                            		<h3>
+                                                    	<a href="#">=小宅</a>
+                                                    </h3>
+                                                    <a href="#">
+                                                    	<img src="img/group5.jpg" />
+                                                    </a>
+                                                    <div class="lookbox clearfix"> 		
+                                                            <span>886个分享</span>
+                                                            <a href="#" class="look-btn fr">去看看</a>
+                                                    </div>
+					                       	</div>
+                                            </li>
+                                    </ul>
+                </div>
+                	<!--maga-wrap end-->  
+                    <div class="foot-wrap">
+                    				<div class="foot-con clearfix">
+                            		<div class=" foot-list service">
+                                    		<div class="service-box clearfix">
+                                            			<span class="s-tel fl"></span>
+                                                        <p class="foot-num">4000-800-577</p>
+                                                         <p class="foot-line">美丽说客服热线</p>
+                                                         <p class="foot-date">周一至周日：08:00-22:00</p>
+                                            </div>           		
+                                    </div>
+                                    <div class="foot-list ">
+                                            			<h3>用户帮助</h3>
+                                                        <p><a href="#">新手指南</a></p>
+                                                         <p><a href="#">网站地图</a></p>
+                                                         <p><a href="#">意见反馈</a></p>       		
+                                    </div>
+                               	     <div class="foot-list ">
+                                            			<h3>关于我们</h3>
+                                                        <p><a href="#">关于美丽说</a></p>
+                                                         <p><a href="#">联系我们</a></p>
+                                                         <p><a href="#">加入美丽说</a></p>  
+                                                         <p><a href="#">商家入驻</a></p> 
+                                                         <p><a href="#">商家推广</a></p>      		
+                                    </div>
+                                 	  <div class="foot-list ">
+                                            			<h3>关注我们</h3>
+                                                        <p><a href="#">
+                                                        	<span class="att-ico1"></span>
+															新浪微博
+                                                        </a></p>
+                                                         <p><a href="#">
+                                                         	<span class="att-ico2"></span>
+                                                         QQ空间</a></p>
+                                                         <p><a href="#">
+                                                         	<span class="att-ico3"></span>
+                                                         腾讯微博</a></p>       		
+                                    </div>
+                                    <div class="foot-wx fl">
+                                    		<h3>美丽说微信服务号</h3>
+                                            <p></p>
+                                    </div>
+                                    <div class="f-download fr">
+                                    		<h3>美丽说客户端下载</h3>
+                                            <p></p>
+                                    </div>
+                            		</div>
+                           			  <div class="foot-rolling clearfix">
+                             			<h3>友情链接：</h3>
+                                    	<ul>
+                                        <li><a href="#">腾讯女性</a></li>
+                                       <li><a href="#">列表网</a></li>
+                                       <li><a href="#">太平洋女性网</a></li>
+                                       <li><a href="#">多宝汇</a></li>
+                                       <li><a href="#">七丽女性网</a></li>
+                                       <li><a href="#">酷我音乐</a></li>
+                                       <li><a href="#">LADYMAX时尚网</a></li>
+                                       <li><a href="#">空姐网</a></li>
+                                       <li><a href="#">中国品牌服装网</a></li>
+                                       <li><a href="#">优美网</a></li>
+                                       <li><a href="#">男士时尚</a></li>
+                                       <li><a href="#">哈秀时尚网</a></li>
+                                       <li class="last"><a href="#" >更多&gt;&gt;</a></li>
+                                        </ul>
+                                    </div>
+                                    	<p class="record">Copyright ©2014 Meilishuo.com  电信与信息服务业务经营许可证100798号  企业法人营业执照  京ICP备11031139号  京公网安备110108006045 </p>	
+                                        <p class="record">客服邮箱：kf@meilishuo.com  客服电话：4000-800-577  文明办网文明上网举报电话：010-82615762  <a href="#">违法不良信息举报中心</a> <a href="#">我最喜爱的人民警察评选</a>></p>
+                    </div>
+                    	<!--foot-wrap end-->  
+                        <div class="fixed-wrap">
+                        		<a href="#" class="fixed-ico">
+                                <span class="fixed-gotop">返回顶部</span>
+                                </a>        
+                        </div>
+                        <!--fixed-wrap end-->
+</body>
+</html>
